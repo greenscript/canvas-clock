@@ -1,0 +1,25 @@
+{
+  "name": "canvas-clock",
+  "version": "1.0.0",
+  "description": "a clock made with HTML5 canvas and JavaScript",
+  "main": "index.html",
+  "dependencies": {
+    "browser-sync": "^2.18.7",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1"
+  },
+  "scripts": {
+    "start": "browser-sync start --server --files js/*.js, *.html, css/*.css"
+  },
+  "keywords": [
+    "canvas",
+    "javascript",
+    "clock"
+  ],
+  "author": "greenscript",
+  "license": "MIT"
+}

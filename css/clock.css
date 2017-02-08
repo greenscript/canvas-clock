@@ -1,0 +1,7 @@
+html, body {
+  padding: 0;
+  margin: 0; }
+
+canvas {
+  position: absolute;
+  background-color: #2c3e50; }
