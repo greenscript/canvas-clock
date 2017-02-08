@@ -1,9 +1,4 @@
 function Circle(ctx, positionX, positionY, radius, startAngle, endAngle, fillColor) {
-
-  if (!(this instanceof Circle)) {
-    return new Circle(ctx, positionX, positionY, radius, startAngle, endAngle, fillColor);
-  }
-
   this.ctx = ctx;
   this.positionX = positionX;
   this.positionY = positionY;
@@ -28,10 +23,6 @@ Circle.prototype.update = function(){
 
 function Line(ctx, position, size, width, color) {
 
-  if (!(this instanceof Line)) {
-    return new Line(ctx, position, size, width, color);
-  }
-
   this.ctx = ctx;
   this.position = position;
   this.size = size;
@@ -50,8 +41,14 @@ Line.prototype.render = function() {
   this.ctx.strokeStyle = this.color;
   this.ctx.stroke();
   this.ctx.rotate(-this.position);
+  this.ctx.closePath();
+
 };
 
-Line.prototype.update = function() {
+Line.prototype.update = function(position, size, width, color) {
+  this.position = position;
+  this.size = size;
+  this.width = width;
+  this.color = color;
   this.render();
 };
